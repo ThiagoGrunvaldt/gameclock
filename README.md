@@ -22,7 +22,7 @@ RNF02 – Segurança: Dados de login protegidos por criptografia, comunicação 
 RNF03 – Disponibilidade e Escalabilidade: Capacidade de suportar grande número de usuários simultâneos.
 
 Prototipagem Simples:
-prototipagemGameClockdrawio.png
+[prototipagemGameClockdrawio.png](https://github.com/ThiagoGrunvaldt/gameclock/blob/main/prototipagemGameClockdrawio.png)
 
 Para o prototipo avançado:
 GameClock.zip
