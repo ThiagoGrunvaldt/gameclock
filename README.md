@@ -21,6 +21,11 @@ O sistema deve permitir que o usuário vincule contas de plataformas (ex.: Steam
 2. RNF02 – Segurança: Dados de login protegidos por criptografia, comunicação segura via HTTPS, tokens das APIs das plataformas armazenados com segurança.
 3. RNF03 – Disponibilidade e Escalabilidade: Capacidade de suportar grande número de usuários simultâneos.
 
+## Diagrama de Classe
+https://github.com/ThiagoGrunvaldt/gameclock/blob/main/Diagrama%20de%20Classe%20GameClock.png
+## Diagrama de Sequencia
+https://github.com/ThiagoGrunvaldt/gameclock/blob/main/Diagrama%20de%20sequ%C3%AAncia%20GameClock.png
+
 ## Prototipagem Simples:
 [prototipagemGameClockdrawio.png](https://github.com/ThiagoGrunvaldt/gameclock/blob/main/prototipagemGameClockdrawio.png)
 
