@@ -45,9 +45,9 @@ Tecnologias e suas utilização no projeto:
 # 8. Acesso ao projeto:
 http://gameclock.provisorio.ws/
 
-#9. Licença:
+# 9. Licença:
 
-#10. Agradecimentos:
+# 10. Agradecimentos:
 Agradeço a todos que me ajudaram até aqui nessa caminhada. :)
 
 # Diagrama de Classe
