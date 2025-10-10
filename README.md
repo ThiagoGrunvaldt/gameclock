@@ -16,7 +16,7 @@ Desenvolver o sistema com suas principais funcionalidades como:
 - Sistema de recomendação de jogo ao usuário, conforme os seus dados.
 
 # 4. Escopo do Projeto:
-O escopo está documentado no arquivo escopo.md https://github.com/ThiagoGrunvaldt/gameclock/blob/main/escopo.md
+O escopo está documentado no arquivo [escopo.md](https://github.com/ThiagoGrunvaldt/gameclock/blob/main/escopo.md)
 
 # 5. Tecnologias:
 Tecnologias e suas utilização no projeto:
