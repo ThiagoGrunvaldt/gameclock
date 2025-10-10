@@ -1,39 +1,56 @@
 # GameClock
-## Tema / Objetivo:
+# 1. Indentificação
+- Nome do Projeto: Desenvolvimento do GameClock.
+- Autor: Thiago Grunvaldt
+- Orientador: Clarissa Xavier
+- Data Aprovação: x/11/25
+
+# 2. Sobre:
 Desenvolver um sistema web que centralize e apresente o tempo total de jogos de seus usuários a partir de múltiplas plataformas, oferecendo visualizações claras e úteis sobre o hábito de jogo.
-Principais Funcionalidades:
+
+# 3. Objetivo do projeto:
+Desenvolver o sistema com suas principais funcionalidades como:
 - Sistema de cadastro e login de usuário;
 - Gerenciamento do perfil de usuário.
 - Gerenciamento dos jogos com dados das plataformas externas (steam, epic, riot).
+- Sistema de recomendação de jogo ao usuário, conforme os seus dados.
 
-## Requisitos:
-### Requisitos Funcionais (RF)
-1. RF01 – Cadastro e Autenticação de Usuário: O sistema deve permitir cadastro com nome, e-mail e senha.
-2. RF02 – Gerenciamento de Perfil: O usuário pode editar seu perfil (nome, imagem, descrição).
-3. RF03 - Visualização de Estatísticas:Total de horas jogadas (somando todas as plataformas), jogos mais jogados, conquistas dos jogos.
-4. RF04 – Gerenciamento Manual:Permitir que o usuário adicione, edite ou exclua jogos e conquistas manualmente, caso deseje controlar além das integração futura.
-5. RF05 – Logout:O sistema deve permitir que o usuário encerre sua sessão de forma segura.
-6. RF06 – Integração com Plataformas de Jogos:
-O sistema deve permitir que o usuário vincule contas de plataformas (ex.: Steam, Riot). Deve coletar automaticamente dados de horas jogadas, lista de jogos e atualizar periodicamente essas informações via API.
+# 4. Escopo do Projeto:
+O escopo está documentado no arquivo escopo.md https://github.com/ThiagoGrunvaldt/gameclock/blob/main/escopo.md
 
-### Requisitos Não Funcionais (RNF)
-1. RNF01 – Desempenho e Acessibilidade: Sistema web responsivo (desktop e mobile).
-2. RNF02 – Segurança: Dados de login protegidos por criptografia, comunicação segura via HTTPS, tokens das APIs das plataformas armazenados com segurança.
-3. RNF03 – Disponibilidade e Escalabilidade: Capacidade de suportar grande número de usuários simultâneos.
+# 5. Tecnologias:
+Tecnologias e suas utilização no projeto:
+- Front-End
+-- HTML5, CSS3 e JavaScript: foram utilizados para construir a camada front-end, responsável pela interface de navegação, visualização e interação do usuário com o sistema.
+-- Bootstrap 5.3: framework utilizado para fornecer componentes prontos e assegurar que o design da aplicação seja responsivo em diferentes dispositivos (desktop, tablet e mobile).
+- Back-End
+-- PHP: é a linguagem de back-end usada para processar dados, implementar regras de negócio e realizar a comunicação com o banco de dados.
+-- MySQL: é o banco de dados responsável por armazenar, consultar e manipular os dados dos usuários, jogos e conquistas no sistema.
+- Utilitários
+- XAMPP: é o servidor local utilizado para simular o ambiente de hospedagem do sistema para fins de desenvolvimento.
 
-## Diagrama de Classe
-https://github.com/ThiagoGrunvaldt/gameclock/blob/main/Diagrama%20de%20Classe%20GameClock.png
-## Diagrama de Sequencia
-https://github.com/ThiagoGrunvaldt/gameclock/blob/main/Diagrama%20de%20sequ%C3%AAncia%20GameClock.png
+# 6. Pré Requisitos: 
+- PHP atualizado.
+- XAMPP.
 
-## Prototipagem Simples:
-[prototipagemGameClockdrawio.png](https://github.com/ThiagoGrunvaldt/gameclock/blob/main/prototipagemGameClockdrawio.png)
-
-## Prototipo avançado:
-[GameClock.zip](https://github.com/ThiagoGrunvaldt/gameclock/blob/main/GameClock.zip)
+# 7. Instalação:
 ### Para o sistema rodar, é necessário: 
+Baixar o zip: [GameClock.zip](https://github.com/ThiagoGrunvaldt/gameclock/blob/main/GameClock.zip)
 Descompactar o zip. 
-Possuir o Xampp e colocar o GameClock dentro do htdocs. 
+Colocar a pasta do GameClock dentro da pasta htdocs do Xampp. 
 Com o Xampp, ligar apache e MySQL. 
-Para o banco pegar o arquivo .sql dentro da pasta do sistema e importar no phpmyadmin. 
+Para o banco pegar o arquivo .sql dentro da pasta do gameclock e importar no localhost phpmyadmin. 
 Abrir o sistema com: localhost/gameclock/
+
+# 8. Acesso ao projeto:
+http://gameclock.provisorio.ws/
+
+#9. Licença:
+
+#10. Agradecimentos:
+Agradeço a todos que me ajudaram até aqui nessa caminhada. :)
+
+# Diagrama de Classe
+https://github.com/ThiagoGrunvaldt/gameclock/blob/main/Diagrama%20de%20Classe%20GameClock.png
+# Diagrama de Sequencia
+https://github.com/ThiagoGrunvaldt/gameclock/blob/main/Diagrama%20de%20sequ%C3%AAncia%20GameClock.png
