@@ -1,0 +1,17 @@
+{
+    "name": "2021007553/game-clock",
+    "autoload": {
+        "psr-4": {
+            "2021007553\\GameClock\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Thiago"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "~6.0"
+    }
+}

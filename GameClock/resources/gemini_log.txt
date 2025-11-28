@@ -1,0 +1,57 @@
+Array
+(
+    [candidates] => Array
+        (
+            [0] => Array
+                (
+                    [content] => Array
+                        (
+                            [parts] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [text] => válido
+
+                                        )
+
+                                )
+
+                            [role] => model
+                        )
+
+                    [finishReason] => STOP
+                    [avgLogprobs] => -0.0099275466054678
+                )
+
+        )
+
+    [usageMetadata] => Array
+        (
+            [promptTokenCount] => 38
+            [candidatesTokenCount] => 3
+            [totalTokenCount] => 41
+            [promptTokensDetails] => Array
+                (
+                    [0] => Array
+                        (
+                            [modality] => TEXT
+                            [tokenCount] => 38
+                        )
+
+                )
+
+            [candidatesTokensDetails] => Array
+                (
+                    [0] => Array
+                        (
+                            [modality] => TEXT
+                            [tokenCount] => 3
+                        )
+
+                )
+
+        )
+
+    [modelVersion] => gemini-2.0-flash
+    [responseId] => ixZjaILwFMnbx_AP1L-H-AM
+)
