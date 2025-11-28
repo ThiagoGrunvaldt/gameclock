@@ -22,7 +22,7 @@ Desenvolver o sistema com suas principais funcionalidades:
 ## 4. Escopo do Projeto
 
 ### Entregáveis:
-* Software web do GameClock funcional e hospedado.
+* Software web do GameClock funcional.
 * Documentação técnica do software (Diagramas UML e Banco de Dados).
 * Script de recomendação em Python integrado.
 * Manual para instalação e utilização.
@@ -45,6 +45,5 @@ Desenvolver o sistema com suas principais funcionalidades:
 
 ### Exclusões (O que não está no MVP):
 
-* Integração com Epic Games, Riot Games, PSN e Xbox (ficará para versões futuras 2.0).
+* Integração com Epic Games, Riot Games, PSN e Xbox (ficará para versões futuras).
 * Sistema de chat ou rede social entre usuários.
-* Aplicativo nativo (Android/iOS) - o foco é Web Responsivo.
