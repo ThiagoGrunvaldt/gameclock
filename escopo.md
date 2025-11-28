@@ -1,40 +1,50 @@
-# GameClock
-# 1. Indentificação
-- Nome do Projeto: Desenvolvimento do GameClock.
-- Autor: Thiago Grunvaldt
-- Orientador: Clarissa Xavier
-- Data Aprovação: x/11/25
+# Escopo do Projeto - GameClock
 
-# 2. Sobre:
-Desenvolver um sistema web que centralize e apresente o tempo total de jogos de seus usuários a partir de múltiplas plataformas, oferecendo visualizações claras e úteis sobre o hábito de jogo.
+## 1. Identificação
 
-# 3. Objetivo do projeto:
-Desenvolver o sistema com suas principais funcionalidades como:
-- Sistema de cadastro e login de usuário;
-- Gerenciamento do perfil de usuário.
-- Gerenciamento dos jogos com dados das plataformas externas (steam, epic, riot).
-- Sistema de recomendação de jogo ao usuário, conforme os seus dados.
+* **Nome do Projeto:** Desenvolvimento do GameClock
+* **Autor:** Thiago Grunvaldt
+* **Orientador:** Clarissa Xavier
+* **Data Aprovação:** 11/2025
 
-# 4. Escopo do Projeto
-## Entregáveis:
-- Software web do Gameclock funcional.
-- Documentação técnica do software.
-- Manual para instalação e utilização.
+## 2. Sobre
 
-## Requisitos:
+Desenvolver um sistema web que centralize e apresente o tempo total de jogos de seus usuários. O diferencial do sistema é a capacidade de **sincronização automática** com a biblioteca da Steam e a utilização de um algoritmo de Ciência de Dados para recomendar novos jogos com base na similaridade entre usuários.
+
+## 3. Objetivo do Projeto
+
+Desenvolver o sistema com suas principais funcionalidades:
+* Sistema de cadastro e login de usuário.
+* Gerenciamento do perfil de usuário com personalização.
+* **Integração via API da Steam** para coleta automática de jogos, tempo de jogo e conquistas.
+* **Sistema Inteligente de Recomendação** (Python) para sugerir jogos baseados no perfil do usuário.
+
+## 4. Escopo do Projeto
+
+### Entregáveis:
+* Software web do GameClock funcional e hospedado.
+* Documentação técnica do software (Diagramas UML e Banco de Dados).
+* Script de recomendação em Python integrado.
+* Manual para instalação e utilização.
+
 ### Requisitos Funcionais (RF)
-1. RF01 – Cadastro e Autenticação de Usuário: O sistema deve permitir cadastro com nome, e-mail e senha.
-2. RF02 – Gerenciamento de Perfil: O usuário pode editar seu perfil (nome, imagem, descrição).
-3. RF03 - Visualização de Estatísticas:Total de horas jogadas (somando todas as plataformas), jogos mais jogados, conquistas dos jogos.
-4. RF04 – Gerenciamento Manual:Permitir que o usuário adicione, edite ou exclua jogos e conquistas manualmente, caso deseje controlar além das integração futura.
-5. RF05 – Logout:O sistema deve permitir que o usuário encerre sua sessão de forma segura.
-6. RF06 – Integração com Plataformas de Jogos:
-O sistema deve permitir que o usuário vincule contas de plataformas (ex.: Steam, Riot). Deve coletar automaticamente dados de horas jogadas, lista de jogos e atualizar periodicamente essas informações via API.
+
+* **RF01 – Cadastro e Autenticação:** O sistema deve permitir cadastro com nome, e-mail, senha e gerenciamento de sessão.
+* **RF02 – Gerenciamento de Perfil:** O usuário pode editar seu perfil, incluindo upload de foto, descrição e definição de "ID Personalizado" (Vanity URL).
+* **RF03 – Integração com Steam:** O sistema deve permitir vincular uma conta Steam (via ID ou URL). Deve coletar automaticamente a lista de jogos possuídos e o tempo total jogado de cada um.
+* **RF04 – Sincronização de Conquistas:** O sistema deve buscar e armazenar as conquistas desbloqueadas de cada jogo importado da Steam.
+* **RF05 – Sistema de Recomendação:** O sistema deve processar os dados dos usuários e exibir uma lista de 5 jogos recomendados, utilizando um algoritmo de filtragem colaborativa (intersecção de bibliotecas).
+* **RF06 – Visualização de Dados:** Exibição clara dos jogos em *cards*, mostrando horas jogadas (convertidas de minutos) e lista de conquistas.
 
 ### Requisitos Não Funcionais (RNF)
-1. RNF01 – Desempenho e Acessibilidade: Sistema web responsivo (desktop e mobile).
-2. RNF02 – Segurança: Dados de login protegidos por criptografia, comunicação segura via HTTPS, tokens das APIs das plataformas armazenados com segurança.
-3. RNF03 – Disponibilidade e Escalabilidade: Capacidade de suportar grande número de usuários simultâneos.
 
-## Exclusões:
-- Integração com Steam, EpicGames, RiotGames. Para utilização dos dados dos usuários de jogos e conquistas.
+* **RNF01 – Desempenho e Acessibilidade:** Interface responsiva utilizando Bootstrap 5.3 (Desktop e Mobile).
+* **RNF02 – Interoperabilidade:** O backend em PHP deve ser capaz de executar scripts externos em Python para processamento de dados de recomendação.
+* **RNF03 – Integridade de Dados:** O sistema deve evitar duplicidade de jogos ao sincronizar múltiplas vezes (`INSERT ... ON DUPLICATE KEY`).
+* **RNF04 – Dependências:** Gerenciamento de bibliotecas via Composer (PHP) e Pip (Python).
+
+### Exclusões (O que não está no MVP):
+
+* Integração com Epic Games, Riot Games, PSN e Xbox (ficará para versões futuras 2.0).
+* Sistema de chat ou rede social entre usuários.
+* Aplicativo nativo (Android/iOS) - o foco é Web Responsivo.
