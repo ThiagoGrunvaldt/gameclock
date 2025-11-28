@@ -1,56 +1,88 @@
 # GameClock
-# 1. Indentificação
-- Nome do Projeto: Desenvolvimento do GameClock.
-- Autor: Thiago Grunvaldt
-- Orientador: Clarissa Xavier
-- Data Aprovação: x/11/25
 
-# 2. Sobre:
-Desenvolver um sistema web que centralize e apresente o tempo total de jogos de seus usuários a partir de múltiplas plataformas, oferecendo visualizações claras e úteis sobre o hábito de jogo.
+## 1. Identificação
 
-# 3. Objetivo do projeto:
-Desenvolver o sistema com suas principais funcionalidades como:
-- Sistema de cadastro e login de usuário;
-- Gerenciamento do perfil de usuário.
-- Gerenciamento dos jogos com dados das plataformas externas (steam, epic, riot).
-- Sistema de recomendação de jogo ao usuário, conforme os seus dados.
+* **Nome do Projeto:** Desenvolvimento do GameClock
+* **Autor:** Thiago Grunvaldt
+* **Orientador:** Clarissa Xavier
+* **Data Aprovação:** 11/2025
 
-# 4. Escopo do Projeto:
-O escopo está documentado no arquivo [escopo.md](https://github.com/ThiagoGrunvaldt/gameclock/blob/main/escopo.md)
+## 2. Sobre
 
-# 5. Tecnologias:
-Tecnologias e suas utilização no projeto:
-- Front-End
-  - HTML5, CSS3 e JavaScript: foram utilizados para construir a camada front-end, responsável pela interface de navegação, visualização e interação do usuário com o sistema.
-  - Bootstrap 5.3: framework utilizado para fornecer componentes prontos e assegurar que o design da aplicação seja responsivo em diferentes dispositivos (desktop, tablet e mobile).
-- Back-End
-  - PHP: é a linguagem de back-end usada para processar dados, implementar regras de negócio e realizar a comunicação com o banco de dados.
-  - MySQL: é o banco de dados responsável por armazenar, consultar e manipular os dados dos usuários, jogos e conquistas no sistema.
-- Utilitários
-  - XAMPP: é o servidor local utilizado para simular o ambiente de hospedagem do sistema para fins de desenvolvimento.
+O **GameClock** é um sistema web desenvolvido para centralizar e apresentar o tempo total de jogos dos usuários. Diferente de listas manuais, o sistema evoluiu para integrar-se diretamente com a API da **Steam**, importando automaticamente a biblioteca de jogos, horas jogadas e conquistas. Além disso, conta com um sistema inteligente de recomendação de jogos baseado em filtragem colaborativa (Python).
 
-# 6. Pré Requisitos: 
-- PHP atualizado.
-- XAMPP.
+## 3. Objetivos e Funcionalidades
 
-# 7. Instalação:
-### Para o sistema rodar, é necessário: 
-- Baixar o zip: [GameClock.zip](https://github.com/ThiagoGrunvaldt/gameclock/blob/main/GameClock.zip)
-- Descompactar o zip. 
-- Colocar a pasta do GameClock dentro da pasta htdocs do Xampp. 
-- Com o Xampp, ligar apache e MySQL. 
-- Para o banco pegar o arquivo .sql dentro da pasta do gameclock e importar no localhost phpmyadmin. 
-- Abrir o sistema com: localhost/gameclock/
+O objetivo principal é oferecer uma visão unificada do perfil *gamer* do usuário.
 
-# 8. Acesso ao projeto:
-http://gameclock.provisorio.ws/
+### Funcionalidades Principais:
+* **Integração com Steam:** Vínculo de conta via SteamID ou URL personalizada para importação automática de jogos e tempo de jogo.
+* **Sincronização de Conquistas:** Coleta automática de conquistas desbloqueadas na Steam.
+* **Sistema de Recomendação:** Sugestão de novos jogos baseada na similaridade com a biblioteca de outros usuários (Algoritmo em Python).
+* **Gerenciamento de Perfil:** Edição de dados pessoais, foto de perfil e biografia.
+* **Ranking:** Visualização de usuários com mais horas ou conquistas.
 
-# 9. Licença:
+## 4. Tecnologias Utilizadas
 
-# 10. Agradecimentos:
-Agradeço a todos que me ajudaram até aqui nessa caminhada. :)
+### Front-End
+* **HTML5, CSS3 e JavaScript:** Estrutura e interatividade.
+* **Bootstrap 5.3:** Framework para design responsivo (Desktop/Mobile).
 
-# Diagrama de Classe
-https://github.com/ThiagoGrunvaldt/gameclock/blob/main/Diagrama%20de%20Classe%20GameClock.png
-# Diagrama de Sequencia
-https://github.com/ThiagoGrunvaldt/gameclock/blob/main/Diagrama%20de%20sequ%C3%AAncia%20GameClock.png
+### Back-End
+* **PHP:** Linguagem principal do servidor e regras de negócio.
+* **Python:** Utilizado no microsserviço de recomendação de jogos (Data Science).
+
+### Banco de Dados
+* **MySQL:** Armazenamento relacional de usuários, jogos e conquistas.
+
+### Utilitários e Dependências
+* **XAMPP:** Ambiente de servidor local (Apache + MySQL).
+* **Composer:** Gerenciador de dependências PHP (utilizado para PHPMailer).
+* **Git/GitHub:** Controle de versionamento.
+
+## 5. Pré-Requisitos
+
+Para rodar o projeto localmente, você precisará de:
+* **XAMPP** (ou outro servidor Apache/MySQL).
+* **PHP** (versão 7.4 ou superior).
+* **Composer** instalado.
+* **Python** (versão 3.x instalada e adicionada ao PATH do sistema).
+
+## 6. Instalação e Configuração
+
+Siga os passos abaixo para configurar o ambiente:
+
+### Passo 1: Arquivos
+1.  Clone este repositório ou baixe o ZIP.
+2.  Coloque a pasta do projeto dentro do diretório `htdocs` do seu XAMPP (ex: `C:\xampp\htdocs\GameClock`).
+
+### Passo 2: Banco de Dados
+1.  Abra o XAMPP e inicie os serviços **Apache** e **MySQL**.
+2.  Acesse o PHPMyAdmin (`http://localhost/phpmyadmin`).
+3.  Crie um banco de dados chamado `game_clock`, conforme configurado no `conexao.php`.
+4.  Importe o arquivo `.sql` que está na raiz do projeto (ex: `GameClock.sql` ou `game_clockAttSteam.sql`).
+
+### Passo 3: Dependências do PHP
+1.  Abra o terminal na pasta do projeto.
+2.  Execute o comando para instalar o PHPMailer e outras libs:
+    ```bash
+    composer install
+    ```
+    *(Isso criará a pasta `vendor` automaticamente).*
+
+### Passo 4: Dependências do Python
+Para que o sistema de recomendação funcione, instale o conector do MySQL para Python:
+1.  No terminal, execute:
+    ```bash
+    pip install mysql-connector-python
+    ```
+
+### Passo 5: Execução
+1.  Acesse no seu navegador: `http://localhost/GameClock/`.
+2.  Crie uma conta e vincule seu perfil da Steam na página de configurações para testar a sincronização.
+
+## 7. Estrutura de Pastas Relevantes
+
+* `/pages`: Páginas visíveis ao usuário (Login, Perfil, Detalhes).
+* `/resources`: Scripts de lógica PHP (Conexão, Classes, Funções de API).
+* `/uploads`: Armazena as fotos
