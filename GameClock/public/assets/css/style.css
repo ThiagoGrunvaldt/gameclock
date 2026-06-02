@@ -1,0 +1,99 @@
+/* Estilo para o navbar fixo */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: #ff79c6;
+    color: black;
+}
+
+/* Estilo global para o corpo */
+body {
+    background-color: #282a36; /* Cor de fundo padrão */
+    margin: 0;
+    padding-top: 55px; /* Ajuste o valor conforme a altura do navbar */
+}
+
+/* Classe específica para centralizar conteúdo */
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo para o formulário */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o título do formulário */
+.form-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para o login e cadastro container */
+.login-container, .cadastro-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    width: 150px; /* Largura fixa */
+    height: 150px; /* Altura fixa */
+    object-fit: cover; /* Ajusta o conteúdo da imagem para preencher o espaço */
+    border-radius: 5%;
+    border: 2px solid black; /* Adiciona uma borda */
+}
+
+    /*foto no header*/
+.user-photo {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin-right: 10px;
+    border: 1px solid black; /* Adiciona uma borda leve */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.img-thumbnail {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
